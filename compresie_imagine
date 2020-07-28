@@ -1,0 +1,21 @@
+#COMPRESIE_IMAGINE
+import math
+m = int(input())
+n = int(input())
+a = []
+for i in range(m):
+    linie = []
+    for j in range(n):
+        elem = int(input())
+        linie.append(elem)
+    a.append(linie)
+suma = 0
+for i in range(m):
+    for j in range(n):
+        suma += a[i][j]
+af = 1/math.sqrt(m) * 1/math.sqrt(n) * suma
+for i in range(m):
+    linie = []
+    for j in range(n):
+        a[i][j] = math.floor(1/math.sqrt(m) * 1/math.sqrt(n) * af)
+        print(a[i][j])
