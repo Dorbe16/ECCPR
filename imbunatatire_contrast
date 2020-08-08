@@ -1,0 +1,14 @@
+#IMBUNATATIRE_CONTRAST
+import math
+linii = int(input())
+col = int(input())
+linie = []
+sum = 0
+for i in range(linii):
+    for j in range(col):
+        val = int(input())
+        linie.append(val)
+        f = math.floor(val * 0.9 + 2)
+        sum += f - val
+rez = format(sum/len(linie), '.2f')
+print(rez)
