@@ -4,7 +4,7 @@ k,M = input().split()
 k = int(k)
 M = int(M)
 aranjamente = []
-for i in range(k,M//2):
+for i in range(k,M + 1):
     m = math.factorial(i) / math.factorial(i-k)
     if m <= M:
         aranjamente.append(i)
