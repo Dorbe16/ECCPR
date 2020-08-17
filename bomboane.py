@@ -1,4 +1,3 @@
-#BOMBOANE
 n = int(input())
 suma = 0 
 arome = []
@@ -13,6 +12,10 @@ for i in range(n):
         suma -= pret
         fericire += aroma
         arome.append(aroma)
-    elif arome != [] and suma < pret and aroma > max(arome):
-        fericire -= aroma
+    elif suma < pret:
+        if not arome:
+            fericire -= aroma
+        elif arome:
+            if aroma >= max(arome):
+                fericire -= aroma
 print(fericire)
